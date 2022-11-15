@@ -1,13 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'arabic';
     src: url('./fonts/qatar2022arabic-bold.ttf') format('truetype'),
         url('./fonts/qatar2022arabic-heavy.ttf') format('truetype');
-}
-
-.header {
-    font-family: 'arabic';
-    color: white;
-    text-align: center;
 }
 
 body {
