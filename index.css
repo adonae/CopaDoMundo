@@ -2,9 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Qatar2022', sans-serif;
+    color: white;
 }
-
-@import url('https://fonts.cdnfonts.com/css/qatar2022');
 
 body {
     background-color: #330000;
@@ -15,18 +15,30 @@ body {
 
 .header {
     display: flex;
-    font-family: 'Qatar2022', sans-serif;
-    color: white;
     padding-top: 25px;
     padding-left: 50px;
     margin-bottom: 50px;
 }
 
-.tableStyle {
-    font-family: 'Qatar2022', sans-serif;
-    color: white;
+p {
+    margin-left: 350px;
+    font-size: 48px;
+    text-align: center;
 }
 
-.tableGap {
-    row-gap: 10px;
+.container {
+    margin-left: 50px;
+}
+
+table {
+    margin-bottom: 30px;
+}
+
+.groups {
+    width: 143px;
+}
+
+th, td {
+    padding: 0.1rem;
+    text-align: start;
 }
