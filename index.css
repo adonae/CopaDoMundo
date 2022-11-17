@@ -40,6 +40,12 @@ table {
     margin-bottom: 30px;
 }
 
+#textArea {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
 .groups {
     width: 143px;
 }
