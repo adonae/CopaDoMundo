@@ -55,3 +55,14 @@ th, td {
     padding: 0.1rem;
     text-align: justify;
 }
+
+.container2 {
+    display: grid;
+    justify-items: center;
+    color: white;
+}
+
+#title {
+    font-size: 28px;
+    text-align: center;
+}

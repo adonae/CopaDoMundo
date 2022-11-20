@@ -29,7 +29,7 @@
     <!-- Grupos A a H -->
     <div class="container">
         <!--Grupo A - Classificação-->
-        <table class="groups">
+        <table class="groups pontos">
             <thead>
                 <tr>
                     <th>Grupo A</th>
@@ -42,55 +42,59 @@
                     <th>SG</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody class="pontosList">
+                <tr id="qatar">
                     <th>
                         <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
                         Qatar
                     </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[0]</td>
                 </tr>
-                <tr>
+                <tr id="equador">
                     <th>
                         <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
                     </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[1]</td>
                 </tr>
-                <tr>
+                <tr id="holanda">
                     <th>
                         <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20"> Holanda
                     </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[2]</td>
                 </tr>
-                <tr>
+                <tr id="senegal">
                     <th>
                         <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
                     </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[3]</td>
                 </tr>
         </table>
 
@@ -102,9 +106,13 @@
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
                     Qatar
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo1a, aJogo1b, times[2], times[0], qatar, equador, aux[0], 2, 0, 0)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo1a, aJogo1b, times[2], times[0], qatar, equador, aux[0], 2, 0, 0)"></td>
                 <td>
                     <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
                 </td>
@@ -116,9 +124,15 @@
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20">
                     Senegal
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo2a, aJogo2b, times[1], times[3], senegal, holanda, aux[1], 1, 3, 0)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo2a, aJogo2b, times[1], times[3], senegal, holanda, aux[1], 1, 3, 0)">
+                </td>
                 <td>
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20"> Holanda
                 </td>
@@ -130,9 +144,13 @@
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
                     Qatar
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo3a, aJogo3b, times[2], times[1], qatar, senegal, aux[2], 2, 1, 0)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo3a, aJogo3b, times[2], times[1], qatar, senegal, aux[2], 2, 1, 0)"></td>
                 <td>
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
                 </td>
@@ -144,9 +162,15 @@
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20">
                     Holanda
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo4a, aJogo4b, times[3], times[0], holanda, equador, aux[3], 3, 0, 0)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogoba" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo4a, aJogo4b, times[3], times[0], holanda, equador, aux[3], 3, 0, 0)">
+                </td>
                 <td>
                     <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
                 </td>
@@ -158,9 +182,15 @@
                     <img src="./img/equador.png" alt="Equador" width="20" height="20">
                     Equador
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo5a, aJogo5b, times[3], times[2], equador, senegal, aux[4], 3, 2, 0)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo5a, aJogo5b, times[3], times[2], equador, senegal, aux[4], 3, 2, 0)">
+                </td>
                 <td>
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
                 </td>
@@ -172,9 +202,13 @@
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20">
                     Holanda
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo6a, aJogo6b, times[0], times[1], holanda, qatar, aux[5], 0, 1, 0)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="number" id="aJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(aJogo6a, aJogo6b, times[0], times[1], holanda, qatar, aux[5], 0, 1, 0)"></td>
                 <td>
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20"> Qatar
                 </td>
@@ -412,9 +446,9 @@
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20">
                     Argentina
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20"> Arábia Saudita
                 </td>
@@ -426,9 +460,9 @@
                     <img src="./img/mexico.png" alt="México" width="20" height="20">
                     México
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20"> Polônia
                 </td>
@@ -440,9 +474,9 @@
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20">
                     Polônia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20"> Arábia Saudita
                 </td>
@@ -454,9 +488,9 @@
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20">
                     Argentina
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/mexico.png" alt="México" width="20" height="20"> México
                 </td>
@@ -468,9 +502,9 @@
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20">
                     Polônia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20"> Argentina
                 </td>
@@ -482,9 +516,9 @@
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20">
                     Arábia Saudita
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/mexico.png" alt="México" width="20" height="20"> México
                 </td>
@@ -567,9 +601,9 @@
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20">
                     Dinamarca
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20"> Tunísia
                 </td>
@@ -581,9 +615,9 @@
                     <img src="./img/franca.png" alt="França" width="20" height="20">
                     França
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20"> Austrália
                 </td>
@@ -595,9 +629,9 @@
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20">
                     Tunísia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20"> Austrália
                 </td>
@@ -609,9 +643,9 @@
                     <img src="./img/franca.png" alt="França" width="20" height="20">
                     França
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca
                 </td>
@@ -623,9 +657,9 @@
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20">
                     Tunísia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/franca.png" alt="França" width="20" height="20"> França
                 </td>
@@ -637,9 +671,9 @@
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20">
                     Austrália
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca
                 </td>
@@ -652,7 +686,7 @@
         <table class="groups">
             <thead>
                 <tr>
-                    <th>Grupo D</th>
+                    <th>Grupo E</th>
                     <th>PTS</th>
                     <th>VIT</th>
                     <th>EMP</th>
@@ -722,9 +756,9 @@
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20">
                     Alemanha
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/japao.png" alt="Japão" width="20" height="20"> Japão
                 </td>
@@ -736,23 +770,23 @@
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20">
                     Espanha
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20"> Costa Rica
                 </td>
                 <td>Qua., 23/11 - 13:00<br>
-                    Estádio Al Thumamad</td>
+                    Estádio Al Thumama</td>
             </tr>
             <tr>
                 <td>
                     <img src="./img/japao.png" alt="Japão" width="20" height="20">
                     Japão
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20"> Costa Rica
                 </td>
@@ -764,9 +798,9 @@
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20">
                     Espanha
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20"> Alemanha
                 </td>
@@ -778,9 +812,9 @@
                     <img src="./img/japao.png" alt="Japão" width="20" height="20">
                     Japão
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20"> Espanha
                 </td>
@@ -792,9 +826,9 @@
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20">
                     Costa Rica
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20"> Alemanha
                 </td>
@@ -877,9 +911,9 @@
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20">
                     Marrocos
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20"> Croácia
                 </td>
@@ -891,9 +925,9 @@
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20">
                     Bélgica
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20"> Canadá
                 </td>
@@ -905,9 +939,9 @@
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20">
                     Bélgica
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20"> Marrocos
                 </td>
@@ -919,9 +953,9 @@
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20">
                     Croácia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20"> Canadá
                 </td>
@@ -933,9 +967,9 @@
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20">
                     Croácia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20"> Bélgica
                 </td>
@@ -947,9 +981,9 @@
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20">
                     Canadá
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20"> Marrocos
                 </td>
@@ -1032,9 +1066,9 @@
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20">
                     Suíça
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20"> Camarões
                 </td>
@@ -1046,9 +1080,9 @@
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20">
                     Brasil
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20"> Sérvia
                 </td>
@@ -1060,9 +1094,9 @@
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20">
                     Camarões
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20"> Sérvia
                 </td>
@@ -1074,9 +1108,9 @@
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20">
                     Brasil
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20"> Suíça
                 </td>
@@ -1088,9 +1122,9 @@
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20">
                     Camarões
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20"> Brasil
                 </td>
@@ -1102,9 +1136,9 @@
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20">
                     Sérvia
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20"> Suíça
                 </td>
@@ -1187,9 +1221,9 @@
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20">
                     Uruguai
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20"> Coreia do Sul
                 </td>
@@ -1201,9 +1235,9 @@
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20">
                     Portugal
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/gana.png" alt="Gana" width="20" height="20"> Gana
                 </td>
@@ -1215,9 +1249,9 @@
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20">
                     Coreia do Sul
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/gana.png" alt="Gana" width="20" height="20"> Gana
                 </td>
@@ -1229,9 +1263,9 @@
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20">
                     Portugal
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20"> Uruguai
                 </td>
@@ -1243,9 +1277,9 @@
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20">
                     Coreia do Sul
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20"> Portugal
                 </td>
@@ -1257,9 +1291,9 @@
                     <img src="./img/gana.png" alt="Gana" width="20" height="20">
                     Gana
                 </td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>x</td>
-                <td><input type="text" name="" id="textArea" maxLength="2"></td>
+                <td><input type="number" name="" id="textArea" maxLength="2"></td>
                 <td>
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20"> Uruguai
                 </td>
@@ -1268,10 +1302,12 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div class="container2">
         <!--Oitavas de Final-->
         <table>
-            <th>Oitavas de Final</th>
+            <tr class="title">
+                <th>Oitavas de Final</th>
+            </tr>
             <tr>
                 <td>Primeiro do grupo A</td>
                 <td><input type="number" name="" id="textArea" maxLength="2"></td>
@@ -1346,10 +1382,10 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div class="container2">
         <!--Quartas de Final-->
         <table>
-            <th>Quartas de Final</th>
+            <th class="title">Quartas de Final</th>
             <tr>
                 <td>Vencedor Oitavas 1</td>
                 <td><input type="number" name="" id="textArea" maxLength="2"></td>
@@ -1388,10 +1424,10 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div class="container2">
         <!--Semifinal-->
         <table>
-            <th>Semifinal</th>
+            <th class="title">Semifinal</th>
             <tr>
                 <td>Vencedor Quartas 1</td>
                 <td><input type="number" name="" id="textArea" maxLength="2"></td>
@@ -1412,10 +1448,10 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div class="container2">
         <!--Terceiro Lugar-->
         <table>
-            <th>Terceiro lugar</th>
+            <th class="title">Terceiro lugar</th>
             <tr>
                 <td>Perdedor Semifinal 1</td>
                 <td><input type="number" name="" id="textArea" maxLength="2"></td>
@@ -1427,10 +1463,10 @@
             </tr>
         </table>
     </div>
-    <div>
+    <div class="container2">
         <!--Final-->
         <table>
-            <th>Final</th>
+            <th class="title">Final</th>
             <tr>
                 <td>Vencedor Semifinal 1</td>
                 <td><input type="number" name="" id="textArea" maxLength="2"></td>
@@ -1441,10 +1477,22 @@
                     Estádio Lusail</td>
             </tr>
         </table>
+    </div>
 
-        <footer style="text-align: center; color: white;">
-            Feito com ❤ por Adonae Vitorino.
-        </footer>
+    <footer style="text-align: center; color: white;">
+        Feito com ❤ por Adonae Vitorino.
+    </footer>
+
+    <!--JAVASCRIPT-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/GrupoA.js"></script>
+    <script type="text/javascript" src="js/GrupoB.js"></script>
+    <script type="text/javascript" src="js/GrupoC.js"></script>
+    <script type="text/javascript" src="js/GrupoD.js"></script>
+    <script type="text/javascript" src="js/GrupoE.js"></script>
+    <script type="text/javascript" src="js/GrupoF.js"></script>
+    <script type="text/javascript" src="js/GrupoG.js"></script>
+    <script type="text/javascript" src="js/GrupoH.js"></script>
 </body>
 
 </html>
