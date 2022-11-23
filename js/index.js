@@ -1,4 +1,4 @@
-//TABELA COPA DO MUNDO 2018
+//TABELA COPA DO MUNDO 2022
 
 const pontos = document.getElementsByClassName("pontosList");
 const classif = document.getElementById("classif");
@@ -43,14 +43,6 @@ var times = [
 var aux = [];
 var auxQualif = [];
 var qualificados = [];
-
-//Menu lateral
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
 
 //Criar objeto
 function criarAux(ids1, ids2) {
@@ -149,17 +141,6 @@ function classificacao() {
         pontos[0].appendChild(guardaPlacar[i].info);
         pontos[0].children[i + 1].children[0].textContent = (i + 1);
     }
-}
-
-//Mostrar os classificados
-function vGeral(grupo) {
-    visaoGeral.style.display = "";
-
-    classif.children[0].children[0].children[1].children[0].src = JSON.parse(localStorage.getItem("qualificados"))[grupo].lugar1.img;
-    classif.children[0].children[0].children[2].textContent = JSON.parse(localStorage.getItem("qualificados"))[grupo].lugar1.pais.toUpperCase();
-
-    classif.children[0].children[1].children[1].children[0].src = JSON.parse(localStorage.getItem("qualificados"))[grupo].lugar2.img;
-    classif.children[0].children[1].children[2].textContent = JSON.parse(localStorage.getItem("qualificados"))[grupo].lugar2.pais.toUpperCase();
 }
 
 //Função para avaliar vitoria/derrota/empate
@@ -263,71 +244,8 @@ function comparar(id1, id2, time1, time2, pais1, pais2, auxt, json1, json2, grup
 
     tabela(time1, time2, pais1, pais2, json1, json2);
     classificacao();
-
-    //Times que passaram da fase de Grupo
-    qualificados[grupo] = {
-        lugar1: auxQualif[0],
-        lugar2: auxQualif[1]
-    };
-    localStorage.setItem("qualificados", JSON.stringify(qualificados));
-    vGeral(grupo);
 }
 
-//Função resetar Dados
-function reset(ident) {
-
-    //Zerando os dados dos Times
-    for (var i = 0; i < times.length; i++) {
-        times[i].pontos = 0;
-        times[i].jogos = 0;
-        times[i].vitoria = 0;
-        times[i].empate = 0;
-        times[i].derrota = 0;
-        times[i].golsPro = 0;
-        times[i].golsContra = 0;
-        times[i].saldoGols = 0;
-    }
-
-    //Zerando os auxiliares dos inputs
-    for (var i = 0; i < 48; i++) {
-        aux[i] = new criarAux("a", "a");
-    }
-
-    //Resetando a tabela
-    for (var i = 1; i < 5; i++) {
-        for (var j = 2; j < 11; j++) {
-            pontos[0].children[i].children[j].textContent = "";
-        }
-        pontos[0].children[i].children[0].textContent = "\u268B";
-    }
-
-    //Zerando os inputs
-    eval(ident + "1a").value = ""
-    eval(ident + "1b").value = ""
-
-    eval(ident + "2a").value = ""
-    eval(ident + "2b").value = ""
-
-    eval(ident + "3a").value = ""
-    eval(ident + "3b").value = ""
-
-    eval(ident + "4a").value = ""
-    eval(ident + "4b").value = ""
-
-    eval(ident + "5a").value = ""
-    eval(ident + "5b").value = ""
-
-    eval(ident + "6a").value = ""
-    eval(ident + "6b").value = ""
-
-    visaoGeral.style.display = "none";
-
-    localStorage.removeItem("times");
-    localStorage.removeItem("aux");
-    localStorage.removeItem("qualificados");
-    localStorage.removeItem("auxAll");
-    localStorage.removeItem("finalista");
-}
 
 //Criar auxiliares localStorage nome: aux
 if (localStorage.getItem("aux") == null) {
@@ -356,10 +274,4 @@ if (localStorage.getItem("times") == null) {
 } else {
 
     times = JSON.parse(localStorage.getItem("times"));
-}
-
-//localStorage nome: qualificados
-if (localStorage.getItem("qualificados") != null) {
-
-    qualificados = JSON.parse(localStorage.getItem("qualificados"));
 }

@@ -30,24 +30,25 @@
     <div class="container">
         <!--Grupo A - Classificação-->
         <table class="groups pontos">
-            <thead>
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo A</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody class="pontosList">
-                <tr id="qatar">
-                    <th>
-                        <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
-                        Qatar
-                    </th>
+                <tr id="Qatar">
+                    <td><img src="./img/Qatar.png" alt="Qatar" width="20" height="20"> Qatar</td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -57,10 +58,11 @@
                     <td></td>
                     <td style="display: none;">times[0]</td>
                 </tr>
-                <tr id="equador">
-                    <th>
-                        <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
-                    </th>
+                <tr id="Equador">
+                    <td><img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador</td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -70,10 +72,13 @@
                     <td></td>
                     <td style="display: none;">times[1]</td>
                 </tr>
-                <tr id="holanda">
-                    <th>
+                <tr id="Holanda">
+                    <td>
                         <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20"> Holanda
-                    </th>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -83,10 +88,13 @@
                     <td></td>
                     <td style="display: none;">times[2]</td>
                 </tr>
-                <tr id="senegal">
-                    <th>
+                <tr id="Senegal">
+                    <td>
                         <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
-                    </th>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -96,6 +104,7 @@
                     <td></td>
                     <td style="display: none;">times[3]</td>
                 </tr>
+            </tbody>
         </table>
 
         <!--Grupo A - Jogos-->
@@ -106,13 +115,13 @@
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
                     Qatar
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo1a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo1a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo1a, aJogo1b, times[2], times[0], qatar, equador, aux[0], 2, 0, 0)"></td>
+                        onkeyup="comparar(aJogo1a, aJogo1b, times[0], times[1], qatar, equador, aux[0], 0, 1, 0)"></td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogo1b" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo1b" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo1a, aJogo1b, times[2], times[0], qatar, equador, aux[0], 2, 0, 0)"></td>
+                        onkeyup="comparar(aJogo1a, aJogo1b, times[0], times[1], qatar, equador, aux[0], 0, 1, 0)"></td>
                 <td>
                     <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
                 </td>
@@ -124,14 +133,14 @@
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20">
                     Senegal
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo2a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo2a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo2a, aJogo2b, times[1], times[3], senegal, holanda, aux[1], 1, 3, 0)">
+                        onkeyup="comparar(aJogo2a, aJogo2b, times[3], times[2], senegal, holanda, aux[1], 3, 2, 0)">
                 </td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogo2b" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo2b" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo2a, aJogo2b, times[1], times[3], senegal, holanda, aux[1], 1, 3, 0)">
+                        onkeyup="comparar(aJogo2a, aJogo2b, times[3], times[2], senegal, holanda, aux[1], 3, 2, 0)">
                 </td>
                 <td>
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20"> Holanda
@@ -144,13 +153,13 @@
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20">
                     Qatar
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo3a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo3a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo3a, aJogo3b, times[2], times[1], qatar, senegal, aux[2], 2, 1, 0)"></td>
+                        onkeyup="comparar(aJogo3a, aJogo3b, times[0], times[3], qatar, senegal, aux[2], 0, 3, 0)"></td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogo3b" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo3b" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo3a, aJogo3b, times[2], times[1], qatar, senegal, aux[2], 2, 1, 0)"></td>
+                        onkeyup="comparar(aJogo3a, aJogo3b, times[0], times[3], qatar, senegal, aux[2], 0, 3, 0)"></td>
                 <td>
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
                 </td>
@@ -162,14 +171,14 @@
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20">
                     Holanda
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo4a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo4a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo4a, aJogo4b, times[3], times[0], holanda, equador, aux[3], 3, 0, 0)">
+                        onkeyup="comparar(aJogo4a, aJogo4b, times[2], times[1], holanda, equador, aux[3], 2, 1, 0)">
                 </td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogoba" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogoba" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo4a, aJogo4b, times[3], times[0], holanda, equador, aux[3], 3, 0, 0)">
+                        onkeyup="comparar(aJogo4a, aJogo4b, times[3], times[0], holanda, equador, aux[3], 2, 1, 0)">
                 </td>
                 <td>
                     <img src="./img/equador.png" alt="Equador" width="20" height="20"> Equador
@@ -182,14 +191,14 @@
                     <img src="./img/equador.png" alt="Equador" width="20" height="20">
                     Equador
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo5a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo5a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo5a, aJogo5b, times[3], times[2], equador, senegal, aux[4], 3, 2, 0)">
+                        onkeyup="comparar(aJogo5a, aJogo5b, times[1], times[3], equador, senegal, aux[4], 1, 3, 0)">
                 </td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogo5b" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo5b" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo5a, aJogo5b, times[3], times[2], equador, senegal, aux[4], 3, 2, 0)">
+                        onkeyup="comparar(aJogo5a, aJogo5b, times[1], times[3], equador, senegal, aux[4], 1, 3, 0)">
                 </td>
                 <td>
                     <img src="./img/senegal.png" alt="Senegal" width="20" height="20"> Senegal
@@ -202,13 +211,13 @@
                     <img src="./img/paises-baixos.png" alt="Holanda" width="20" height="20">
                     Holanda
                 </td>
-                <td><input class="placar textArea" type="number" id="aJogo6a" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo6a" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo6a, aJogo6b, times[0], times[1], holanda, qatar, aux[5], 0, 1, 0)"></td>
+                        onkeyup="comparar(aJogo6a, aJogo6b, times[2], times[0], holanda, qatar, aux[5], 2, 0, 0)"></td>
                 <td>x</td>
-                <td><input class="placar textArea" type="number" id="aJogo6b" maxLength="2"
+                <td><input class="placar textArea" type="text" id="aJogo6b" maxLength="2"
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-                        onkeyup="comparar(aJogo6a, aJogo6b, times[0], times[1], holanda, qatar, aux[5], 0, 1, 0)"></td>
+                        onkeyup="comparar(aJogo6a, aJogo6b, times[2], times[0], holanda, qatar, aux[5], 2, 0, 0)"></td>
                 <td>
                     <img src="./img/Qatar.png" alt="Qatar" width="20" height="20"> Qatar
                 </td>
@@ -218,68 +227,85 @@
         </table>
 
         <!--Grupo B - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo B</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>
+                <tr id="eua">
+                    <td>
                         <img src="./img/estados-unidos.png" alt="Estados Unidos" width="20" height="20"> Estados Unidos
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[4]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="inglaterra">
+                    <td>
                         <img src="./img/inglaterra.png" alt="Inglaterra" width="20" height="20">
                         Inglaterra
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[5]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="ira">
+                    <td>
                         <img src="./img/ira.png" alt="Irã" width="20" height="20"> Irã
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[6]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="gales">
+                    <td>
                         <img src="./img/pais-de-gales.png" alt="País de Gales" width="20" height="20"> País de Gales
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[7]</td>
                 </tr>
         </table>
 
@@ -291,9 +317,14 @@
                     <img src="./img/inglaterra.png" alt="Inglaterra" width="20" height="20">
                     Inglaterra
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo1a, bJogo1b, times[5], times[6], inglaterra, ira, aux[6], 5, 6, 1)"></td>
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo1a, bJogo1b, times[5], times[6], inglaterra, ira, aux[6], 5, 6, 1)"></td>
                 <td>
                     <img src="./img/ira.png" alt="Irã" width="20" height="20"> Irã
                 </td>
@@ -305,9 +336,13 @@
                     <img src="./img/estados-unidos.png" alt="Estados Unidos" width="20" height="20">
                     Estados Unidos
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo2a, bJogo2b, times[4], times[7], eua, gales, aux[7], 4, 7, 1)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo2a, bJogo2b, times[4], times[7], eua, gales, aux[7], 4, 7, 1)"></td>
                 <td>
                     <img src="./img/pais-de-gales.png" alt="País de Gales" width="20" height="20"> País de Gales
                 </td>
@@ -319,9 +354,13 @@
                     <img src="./img/pais-de-gales.png" alt="País de Gales" width="20" height="20">
                     País de Gales
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo3a, bJogo3b, times[7], times[6], gales, ira, aux[8], 7, 6, 1)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo3a, bJogo3b, times[7], times[6], gales, ira, aux[8], 7, 6, 1)"></td>
                 <td>
                     <img src="./img/ira.png" alt="Irã" width="20" height="20"> Irã
                 </td>
@@ -333,9 +372,13 @@
                     <img src="./img/inglaterra.png" alt="Inglaterra" width="20" height="20">
                     Inglaterra
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo4a, bJogo4b, times[5], times[4], inglaterra, eua, aux[9], 5, 4, 1)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo4a, bJogo4b, times[5], times[4], inglaterra, eua, aux[9], 5, 4, 1)"></td>
                 <td>
                     <img src="./img/estados-unidos.png" alt="Estados Unidos" width="20" height="20"> Estados Unidos
                 </td>
@@ -347,9 +390,13 @@
                     <img src="./img/ira.png" alt="Irã" width="20" height="20">
                     Irã
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo5a, bJogo5b, times[6], times[4], ira, eua, aux[10], 6, 4, 1)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo5a, bJogo5b, times[6], times[4], ira, eua, aux[10], 6, 4, 1)"></td>
                 <td>
                     <img src="./img/estados-unidos.png" alt="Senegal" width="20" height="20"> Estados Unidos
                 </td>
@@ -361,9 +408,15 @@
                     <img src="./img/pais-de-gales.png" alt="País de Gales" width="20" height="20">
                     País de Gales
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo6a, bJogo6b, times[7], times[5], gales, inglaterra, aux[11], 7, 5, 1)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="bJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(bJogo6a, bJogo6b, times[7], times[5], gales, inglaterra, aux[11], 7, 5, 1)">
+                </td>
                 <td>
                     <img src="./img/inglaterra.png" alt="Inglaterra" width="20" height="20"> Inglaterra
                 </td>
@@ -373,68 +426,81 @@
         </table>
 
         <!--Grupo C - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo C</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>
+                <tr id="argentina">
+                    <td>
                         <img src="./img/argentina.png" alt="Argentina" width="20" height="20">
                         Argentina
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[8]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="arabia">
+                    <td>
                         <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20"> Arábia Saudita
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[9]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="mexico">
+                    <td>
                         <img src="./img/mexico.png" alt="México" width="20" height="20"> México
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                        </th>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <tnumberd style="display: none;">times[10]</td>
                 </tr>
-                <tr>
-                    <th>
+                <tr id="polonia">
+                    <td>
                         <img src="./img/polonia.png" alt="Polônia" width="20" height="20"> Polônia
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[11]</td>
                 </tr>
         </table>
 
@@ -446,9 +512,16 @@
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20">
                     Argentina
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo1a, cJogo1b, times[8], times[9], argentina, arabia, aux[12], 8, 9, 2)">
+                </td>
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo1a, cJogo1b, times[8], times[9], argentina, arabia, aux[12], 8, 9, 2)">
+                </td>
                 <td>
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20"> Arábia Saudita
                 </td>
@@ -460,9 +533,14 @@
                     <img src="./img/mexico.png" alt="México" width="20" height="20">
                     México
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo2a, cJogo2b, times[10], times[11], mexico, polonia, aux[13], 10, 11, 2)">
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo2a, cJogo2b, times[10], times[11], mexico, polonia, aux[13], 10, 11, 2)">
+                </td>
                 <td>
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20"> Polônia
                 </td>
@@ -474,9 +552,15 @@
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20">
                     Polônia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo3a, cJogo3b, times[11], times[9], polonia, arabia, aux[14], 11, 9, 2)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo3a, cJogo3b, times[11], times[9], polonia, arabia, aux[14], 11, 9, 2)">
+                </td>
                 <td>
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20"> Arábia Saudita
                 </td>
@@ -488,9 +572,15 @@
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20">
                     Argentina
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo4a, cJogo4b, times[8], times[10], argentina, mexico, aux[15], 8, 10, 2)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo4a, cJogo4b, times[8], times[10], argentina, mexico, aux[15], 8, 10, 2)">
+                </td>
                 <td>
                     <img src="./img/mexico.png" alt="México" width="20" height="20"> México
                 </td>
@@ -502,9 +592,15 @@
                     <img src="./img/polonia.png" alt="Polônia" width="20" height="20">
                     Polônia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo5a, cJogo5b, times[11], times[8], polonia, argentina, aux[16], 11, 8, 2)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo5a, cJogo5b, times[11], times[8], polonia, argentina, aux[16], 11, 8, 2)">
+                </td>
                 <td>
                     <img src="./img/argentina.png" alt="Argentina" width="20" height="20"> Argentina
                 </td>
@@ -516,9 +612,15 @@
                     <img src="./img/arabia-saudita.png" alt="Arábia Saudita" width="20" height="20">
                     Arábia Saudita
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo6a, cJogo6b, times[9], times[10], arabia, mexico, aux[17], 9, 10, 2)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="cJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(cJogo6a, cJogo6b, times[9], times[10], arabia, mexico, aux[17], 9, 10, 2)">
+                </td>
                 <td>
                     <img src="./img/mexico.png" alt="México" width="20" height="20"> México
                 </td>
@@ -528,68 +630,82 @@
         </table>
 
         <!--Grupo D - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo D</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/australia.png" alt="Austrália" width="20" height="20"> Austrália
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[12]</td>
                 </tr>
                 <tr>
-                    <th>
-                        <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td><img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca</td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[13]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/franca.png" alt="França" width="20" height="20">
                         França
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[14]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20"> Tunísia
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[15]</td>
                 </tr>
         </table>
 
@@ -601,9 +717,14 @@
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20">
                     Dinamarca
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo1a, dJogo1b, times[13], times[15], dinamarca, tunisia, aux[18], 13, 15, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo1a, dJogo1b, times[13], times[15], dinamarca, tunisia, aux[18], 13, 15, 3)">
                 <td>
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20"> Tunísia
                 </td>
@@ -615,9 +736,15 @@
                     <img src="./img/franca.png" alt="França" width="20" height="20">
                     França
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo2a, dJogo2b, times[14], times[12], franca, australia, aux[19], 14, 12, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo2a, dJogo2b, times[14], times[12], franca, australia, aux[19], 14, 12, 3)">
+                </td>
                 <td>
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20"> Austrália
                 </td>
@@ -629,9 +756,15 @@
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20">
                     Tunísia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo3a, dJogo3b, times[15], times[12], tunisia, australia, aux[20], 15, 12, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo3a, dJogo3b, times[15], times[12], tunisia, australia, aux[20], 15, 12, 3)">
+                </td>
                 <td>
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20"> Austrália
                 </td>
@@ -643,9 +776,15 @@
                     <img src="./img/franca.png" alt="França" width="20" height="20">
                     França
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo4a, dJogo4b, times[14], times[13], franca, dinamarca, aux[21], 14, 13, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo4a, dJogo4b, times[14], times[13], franca, dinamarca, aux[21], 14, 13, 3)">
+                </td>
                 <td>
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca
                 </td>
@@ -657,9 +796,15 @@
                     <img src="./img/tunisia.png" alt="Tunísia" width="20" height="20">
                     Tunísia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo5a, dJogo5b, times[15], times[14], tunisia, franca, aux[22], 14, 13, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo5a, dJogo5b, times[15], times[14], tunisia, franca, aux[22], 14, 13, 3)">
+                </td>
                 <td>
                     <img src="./img/franca.png" alt="França" width="20" height="20"> França
                 </td>
@@ -671,9 +816,15 @@
                     <img src="./img/australia.png" alt="Austrália" width="20" height="20">
                     Austrália
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo6a, dJogo6b, times[12], times[13], australia, dinamarca, aux[23], 12, 13, 3)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="dJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(dJogo6a, dJogo6b, times[12], times[13], australia, dinamarca, aux[23], 12, 13, 3)">
+                </td>
                 <td>
                     <img src="./img/dinamarca.png" alt="Dinamarca" width="20" height="20"> Dinamarca
                 </td>
@@ -683,68 +834,85 @@
         </table>
 
         <!--Grupo E - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo E</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20"> Alemanha
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[16]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20"> Costa Rica
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td<input type="number" name="" id="textArea" maxLength="2"> style="display: none;">times[17]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/espanha.png" alt="Espanha" width="20" height="20">
                         Espanha
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[18]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/japao.png" alt="Japão" width="20" height="20"> Japão
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[19]</td>
                 </tr>
         </table>
 
@@ -756,9 +924,15 @@
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20">
                     Alemanha
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo1a, eJogo1b, times[16], times[19], alemanha, japao, aux[24], 16, 19, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo1a, eJogo1b, times[16], times[19], alemanha, japao, aux[24], 16, 19, 4)">
+                </td>
                 <td>
                     <img src="./img/japao.png" alt="Japão" width="20" height="20"> Japão
                 </td>
@@ -770,9 +944,15 @@
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20">
                     Espanha
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo1a, eJogo1b, times[18], times[17], espanha, costa_rica, aux[25], 18, 17, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo2a, eJogo2b, times[18], times[17], espanha, costa_rica, aux[25], 18, 17, 4)">
+                </td>
                 <td>
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20"> Costa Rica
                 </td>
@@ -784,9 +964,15 @@
                     <img src="./img/japao.png" alt="Japão" width="20" height="20">
                     Japão
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo3a, eJogo3b, times[19], times[17], japao, costa_rica, aux[26], 19, 17, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo3a, eJogo3b, times[19], times[17], japao, costa_rica, aux[26], 19, 17, 4)">
+                </td>
                 <td>
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20"> Costa Rica
                 </td>
@@ -798,9 +984,15 @@
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20">
                     Espanha
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo4a, eJogo4b, times[18], times[16], espanha, alemanha, aux[27], 18, 16, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo4a, eJogo4b, times[18], times[16], espanha, alemanha, aux[27], 18, 16, 4)">
+                </td>
                 <td>
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20"> Alemanha
                 </td>
@@ -812,9 +1004,15 @@
                     <img src="./img/japao.png" alt="Japão" width="20" height="20">
                     Japão
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo5a, eJogo5b, times[19], times[18], japao, espanha, aux[28], 19, 18, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo5a, eJogo5b, times[19], times[18], japao, espanha, aux[28], 19, 18, 4)">
+                </td>
                 <td>
                     <img src="./img/espanha.png" alt="Espanha" width="20" height="20"> Espanha
                 </td>
@@ -826,9 +1024,15 @@
                     <img src="./img/costa-rica.png" alt="Costa Rica" width="20" height="20">
                     Costa Rica
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo6a, eJogo6b, times[17], times[16], costa_rica, alemanha, aux[29], 17, 16, 4)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="eJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(eJogo6a, eJogo6b, times[17], times[16], costa_rica, alemanha, aux[29], 17, 16, 4)">
+                </td>
                 <td>
                     <img src="./img/alemanha.png" alt="Alemanha" width="20" height="20"> Alemanha
                 </td>
@@ -838,68 +1042,85 @@
         </table>
 
         <!--Grupo F - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo F</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/belgica.png" alt="Bélgica" width="20" height="20">
                         Bélgica
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[20]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/canada.png" alt="Canadá" width="20" height="20"> Canadá
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[21]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/croacia.png" alt="Croácia" width="20" height="20"> Croácia
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[22]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20"> Marrocos
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[23]</td>
                 </tr>
         </table>
 
@@ -911,9 +1132,15 @@
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20">
                     Marrocos
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo1a, fJogo1b, times[23], times[22], marrocos, croacia, aux[30], 23, 22, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo1a, fJogo1b, times[23], times[22], marrocos, croacia, aux[30], 23, 22, 5)">
+                </td>
                 <td>
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20"> Croácia
                 </td>
@@ -925,9 +1152,15 @@
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20">
                     Bélgica
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo2a, fJogo2b, times[20], times[21], belgica, canada, aux[31], 20, 21, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo2a, fJogo2b, times[20], times[21], belgica, canada, aux[31], 20, 21, 5)">
+                </td>
                 <td>
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20"> Canadá
                 </td>
@@ -939,9 +1172,15 @@
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20">
                     Bélgica
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo3a, fJogo3b, times[20], times[23], belgica, marrocos, aux[32], 20, 23, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo3a, fJogo3b, times[20], times[23], belgica, marrocos, aux[32], 20, 23, 5)">
+                </td>
                 <td>
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20"> Marrocos
                 </td>
@@ -953,9 +1192,15 @@
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20">
                     Croácia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo4a, fJogo4b, times[22], times[21], croacia, canada, aux[33], 22, 21, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo4a, fJogo4b, times[22], times[21], croacia, canada, aux[33], 22, 21, 5)">
+                </td>
                 <td>
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20"> Canadá
                 </td>
@@ -967,9 +1212,15 @@
                     <img src="./img/croacia.png" alt="Croácia" width="20" height="20">
                     Croácia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo5a, fJogo5b, times[22], times[20], croacia, belgica, aux[34], 22, 20, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo5a, fJogo5b, times[22], times[20], croacia, belgica, aux[34], 22, 20, 5)">
+                </td>
                 <td>
                     <img src="./img/belgica.png" alt="Bélgica" width="20" height="20"> Bélgica
                 </td>
@@ -981,9 +1232,15 @@
                     <img src="./img/canada.png" alt="Canadá" width="20" height="20">
                     Canadá
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo6a, fJogo6b, times[21], times[23], canada, marrocos, aux[35], 21, 23, 5)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="fJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(fJogo6a, fJogo6b, times[21], times[23], canada, marrocos, aux[35], 21, 23, 5)">
+                </td>
                 <td>
                     <img src="./img/marrocos.png" alt="Marrocos" width="20" height="20"> Marrocos
                 </td>
@@ -993,68 +1250,85 @@
         </table>
 
         <!--Grupo G - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo G</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/brasil.png" alt="Brasil" width="20" height="20">
                         Brasil
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[24]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/camaroes.png" alt="Camarões" width="20" height="20"> Camarões
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[25]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/suica.png" alt="Suíça" width="20" height="20"> Suíça
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[26]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/servia.png" alt="Sérvia" width="20" height="20"> Sérvia
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[27]</td>
                 </tr>
         </table>
 
@@ -1066,9 +1340,15 @@
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20">
                     Suíça
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo1a, gJogo1b, times[26], times[25], suica, camaroes, aux[36], 26, 25, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo1a, gJogo1b, times[26], times[25], suica, camaroes, aux[36], 26, 25, 6)">
+                </td>
                 <td>
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20"> Camarões
                 </td>
@@ -1080,9 +1360,15 @@
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20">
                     Brasil
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo2a, gJogo2b, times[24], times[27], brasil, servia, aux[37], 24, 27, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo2b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo2a, gJogo2b, times[24], times[27], brasil, servia, aux[37], 24, 27, 6)">
+                </td>
                 <td>
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20"> Sérvia
                 </td>
@@ -1094,9 +1380,15 @@
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20">
                     Camarões
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo3a, gJogo3b, times[25], times[27], camaroes, servia, aux[38], 25, 27, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo3a, gJogo3b, times[25], times[27], camaroes, servia, aux[38], 25, 27, 6)">
+                </td>
                 <td>
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20"> Sérvia
                 </td>
@@ -1108,9 +1400,15 @@
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20">
                     Brasil
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo4a, gJogo4b, times[24], times[26], brasil, suica, aux[39], 24, 26, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo4a, gJogo4b, times[24], times[26], brasil, suica, aux[39], 24, 26, 6)">
+                </td>
                 <td>
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20"> Suíça
                 </td>
@@ -1122,9 +1420,15 @@
                     <img src="./img/camaroes.png" alt="Camarões" width="20" height="20">
                     Camarões
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo5a, gJogo5b, times[25], times[24], camaroes, brasil, aux[40], 25, 24, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo5a, gJogo5b, times[25], times[24], camaroes, brasil, aux[40], 25, 24, 6)">
+                </td>
                 <td>
                     <img src="./img/brasil.png" alt="Brasil" width="20" height="20"> Brasil
                 </td>
@@ -1136,9 +1440,15 @@
                     <img src="./img/servia.png" alt="Sérvia" width="20" height="20">
                     Sérvia
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo6a, gJogo6b, times[27], times[26], servia, suica, aux[41], 27, 26, 6)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="gJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(gJogo6a, gJogo6b, times[27], times[26], servia, suica, aux[41], 27, 26, 6)">
+                </td>
                 <td>
                     <img src="./img/suica.png" alt="Suíça" width="20" height="20"> Suíça
                 </td>
@@ -1148,68 +1458,85 @@
         </table>
 
         <!--Grupo H - Classificação-->
-        <table class="groups">
-            <thead>
+        <table class="groups pontos">
+            <tbody class="pontosList">
                 <tr>
                     <th>Grupo H</th>
-                    <th>PTS</th>
-                    <th>VIT</th>
-                    <th>EMP</th>
-                    <th>DER</th>
-                    <th>GM</th>
+                    <th>&#9867;</th>
+                    <th>P</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>GP</th>
                     <th>GS</th>
                     <th>SG</th>
+                    <th>%</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20"> Coreia do Sul
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[28]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/gana.png" alt="Gana" width="20" height="20"> Gana
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[29]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/portugal.png" alt="Portugal" width="20" height="20">
                         Portugal
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[30]</td>
                 </tr>
                 <tr>
-                    <th>
+                    <td>
                         <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20"> Uruguai
-                    </th>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    </td>
+                    <td>&#9867;</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="display: none;">times[31]</td>
                 </tr>
         </table>
 
@@ -1221,9 +1548,15 @@
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20">
                     Uruguai
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo1a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo1a, hJogo1b, times[31], times[28], uruguai, coreia, aux[42], 31, 28, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo1b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo1a, hJogo1b, times[31], times[28], uruguai, coreia, aux[42], 31, 28, 7)">
+                </td>
                 <td>
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20"> Coreia do Sul
                 </td>
@@ -1235,9 +1568,15 @@
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20">
                     Portugal
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo2a, hJogo2b, times[30], times[29], portugal, gana, aux[43], 30, 29, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo2a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo2a, hJogo2b, times[30], times[29], portugal, gana, aux[43], 30, 29, 7)">
+                </td>
                 <td>
                     <img src="./img/gana.png" alt="Gana" width="20" height="20"> Gana
                 </td>
@@ -1249,9 +1588,15 @@
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20">
                     Coreia do Sul
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo3a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo3a, hJogo3b, times[28], times[29], coreia, gana, aux[44], 28, 29, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo3b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo3a, hJogo3b, times[28], times[29], coreia, gana, aux[44], 28, 29, 7)">
+                </td>
                 <td>
                     <img src="./img/gana.png" alt="Gana" width="20" height="20"> Gana
                 </td>
@@ -1263,9 +1608,15 @@
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20">
                     Portugal
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo4a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo4a, hJogo4b, times[30], times[31], portugal, uruguai, aux[45], 30, 31, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo4b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo4a, hJogo4b, times[30], times[31], portugal, uruguai, aux[45], 30, 31, 7)">
+                </td>
                 <td>
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20"> Uruguai
                 </td>
@@ -1277,9 +1628,15 @@
                     <img src="./img/coreia-do-sul.png" alt="Coreia do Sul" width="20" height="20">
                     Coreia do Sul
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo5a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo5a, hJogo5b, times[28], times[30], coreia, portugal, aux[46], 28, 30, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo5b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo5a, hJogo5b, times[28], times[30], coreia, portugal, aux[46], 28, 30, 7)">
+                </td>
                 <td>
                     <img src="./img/portugal.png" alt="Portugal" width="20" height="20"> Portugal
                 </td>
@@ -1291,9 +1648,15 @@
                     <img src="./img/gana.png" alt="Gana" width="20" height="20">
                     Gana
                 </td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo6a" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo6a, hJogo6b, times[29], times[31], coreia, portugal, aux[47], 29, 31, 7)">
+                </td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td><input class="placar textArea" type="text" id="hJogo6b" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="comparar(hJogo6a, hJogo6b, times[29], times[31], coreia, portugal, aux[47], 29, 31, 7)">
+                </td>
                 <td>
                     <img src="./img/uruguai.png" alt="Uruguai" width="20" height="20"> Uruguai
                 </td>
@@ -1302,177 +1665,241 @@
             </tr>
         </table>
     </div>
-    <div class="container2">
+    <div class="container2" id="oitavas">
         <!--Oitavas de Final-->
         <table>
             <tr class="title">
                 <th>Oitavas de Final</th>
             </tr>
             <tr>
-                <td>Primeiro do grupo A</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava1jogoA">Primeiro do grupo A</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava1jogoA, oitava1jogoB, quartas1jogoA, false, '', 0)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo B</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava1jogoA, oitava1jogoB, quartas1jogoA, false, '', 0)"></td>
+                <td id="oitava1jogoB">Segundo do grupo B</td>
                 <td>Sáb., 03/12 - 12:00<br>
                     Estádio Internacional Khalifa</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo C</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava2jogoA">Primeiro do grupo C</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava2jogoA, oitava2jogoB, quartas1jogoB, false, '', 1)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo D</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava2jogoA, oitava2jogoB, quartas1jogoB, false, '', 1)"></td>
+                <td id="oitava2jogoB">Segundo do grupo D</td>
                 <td>Sáb., 03/12 - 16:00<br>
                     Estádio Ahmad Bin Ali</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo B</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava5jogoA">Primeiro do grupo B</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava5jogoA, oitava5jogoB, quartas3jogoA, false, '', 4)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo A</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava5jogoA, oitava5jogoB, quartas3jogoA, false, '', 4)"></td>
+                <td id="oitava5jogoB">Segundo do grupo A</td>
                 <td>Dom., 04/12 - 16:00<br>
                     Estádio Al Bayt</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo D</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava6jogoA">Primeiro do grupo D</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava6jogoA, oitava6jogoB, quartas3jogoB,  false, '', 5)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo C</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava6jogoA, oitava6jogoB, quartas3jogoB,  false, '', 5)"></td>
+                <td id="oitava6jogoB">Segundo do grupo C</td>
                 <td>Dom., 04/12 - 12:00<br>
                     Estádio Al Thumama</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo E</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava3jogoA">Primeiro do grupo E</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava3jogoA, oitava3jogoB, quartas2jogoA, false, '', 2)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo F</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava3jogoA, oitava3jogoB, quartas2jogoA, false, '', 2)"></td>
+                <td id="oitava3jogoB">Segundo do grupo F</td>
                 <td>Seg., 05/12 - 12:00<br>
                     Estádio Al Janoub</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo G</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava4jogoA">Primeiro do grupo G</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava4jogoA, oitava4jogoB, quartas2jogoB, false, '', 3)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo H</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava4jogoA, oitava4jogoB, quartas2jogoB, false, '', 3)"></td>
+                <td id="oitava4jogoB">Segundo do grupo H</td>
                 <td>Seg., 05/12 - 16:00<br>
                     Estádio 974</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo F</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava7jogoA">Primeiro do grupo F</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava7jogoA, oitava7jogoB, quartas4jogoA,  false, '', 6)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo E</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava7jogoA, oitava7jogoB, quartas4jogoA,  false, '', 6)"></td>
+                <td id="oitava7jogoB">Segundo do grupo E</td>
                 <td>Ter., 06/12 - 12:00<br>
                     Estádio Cidade da Educação</td>
             </tr>
             <tr>
-                <td>Primeiro do grupo H</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="oitava8jogoA">Primeiro do grupo H</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava8jogoA, oitava8jogoB, quartas4jogoB,  false, '', 7)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Segundo do grupo G</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(oitava8jogoA, oitava8jogoB, quartas4jogoB,  false, '', 7)"></td>
+                <td id="oitava8jogoB">Segundo do grupo G</td>
                 <td>Ter., 06/12 - 16:00<br>
                     Estádio Lusail</td>
             </tr>
         </table>
     </div>
-    <div class="container2">
+    <div class="container2" id="quartas">
         <!--Quartas de Final-->
         <table>
             <th class="title">Quartas de Final</th>
             <tr>
-                <td>Vencedor Oitavas 1</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="quartas1jogoA">Vencedor Oitavas 1</td>
+                <td><input class="placar  textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas1jogoA, quartas1jogoB, semi1jogoA,  false, '', 8)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Oitavas 2</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas1jogoA, quartas1jogoB, semi1jogoA,  false, '', 8)"></td>
+                <td id="quartas1jogoB">Vencedor Oitavas 2</td>
                 <td>Sex., 09/12 - 16:00<br>
                     Estádio Lusail</td>
             </tr>
             <tr>
-                <td>Vencedor Oitavas 3</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="quartas2jogoA">Vencedor Oitavas 3</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas2jogoA, quartas2jogoB, semi1jogoB,  false, '', 9)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Oitavas 4</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas2jogoA, quartas2jogoB, semi1jogoB,  false, '', 9)"></td>
+                <td id="quartas2jogoB">Vencedor Oitavas 4</td>
                 <td>Sex., 09/12 - 12:00<br>
                     Estádio Cidade da Educação</td>
             </tr>
             <tr>
-                <td>Vencedor Oitavas 5</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="quartas3jogoA">Vencedor Oitavas 5</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas3jogoA, quartas3jogoB, semi2jogoA,  false, '', 10)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Oitavas 6</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas3jogoA, quartas3jogoB, semi2jogoA,  false, '', 10)"></td>
+                <td id="quartas3jogoB">Vencedor Oitavas 6</td>
                 <td>Sáb., 10/12 - 16:00<br>
                     Estádio Al Bayt</td>
             </tr>
             <tr>
-                <td>Vencedor Oitavas 7</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="quartas4jogoA">Vencedor Oitavas 7</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas4jogoA, quartas4jogoB, semi2jogoB,  false, '', 11)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Oitavas 8</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(quartas4jogoA, quartas4jogoB, semi2jogoB,  false, '', 11)"></td>
+                <td id="quartas4jogoB">Vencedor Oitavas 8</td>
                 <td>Sáb., 10/12 - 12:00<br>
                     Estádio Al Thumama</td>
             </tr>
         </table>
     </div>
-    <div class="container2">
+    <div class="container2" id="semi">
         <!--Semifinal-->
         <table>
             <th class="title">Semifinal</th>
             <tr>
-                <td>Vencedor Quartas 1</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="semi1jogoA">Vencedor Quartas 1</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(semi1jogoA, semi1jogoB, final1jogoA,  true, final2jogoA, 12)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Quartas 2</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(semi1jogoA, semi1jogoB, final1jogoA,  true, final2jogoA, 12)"></td>
+                <td id="semi1jogoB">Vencedor Quartas 2</td>
                 <td>Ter., 13/12 - 16:00<br>
                     Estádio Lusail</td>
             </tr>
             <tr>
-                <td>Vencedor Quartas 3</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="semi2jogoA">Vencedor Quartas 3</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(semi2jogoA, semi2jogoB, final1jogoB,  true, final2jogoB, 13)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Quartas 4</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="partida(semi2jogoA, semi2jogoB, final1jogoB,  true, final2jogoB, 13)"></td>
+                <td id="semi2jogoB">Vencedor Quartas 4</td>
                 <td>Qua., 14/12 - 16:00<br>
                     Estádio Al Bayt</td>
             </tr>
         </table>
     </div>
-    <div class="container2">
+    <div class="container2" id="terc">
         <!--Terceiro Lugar-->
         <table>
             <th class="title">Terceiro lugar</th>
             <tr>
-                <td>Perdedor Semifinal 1</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="final2jogoA">Perdedor Semifinal 1</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="finalist(final2jogoA, final2jogoB, 15, false, true)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Perdedor Semifinal 2</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="finalist(final2jogoA, final2jogoB, 15, false, true)"></td>
+                <td id="final2jogoB">Perdedor Semifinal 2</td>
                 <td>Sáb., 17/12 - 12:00<br>
                     Estádio Internacional Khalifa</td>
             </tr>
         </table>
     </div>
-    <div class="container2">
+    <div class="container2" id="final">
         <!--Final-->
         <table>
             <th class="title">Final</th>
             <tr>
-                <td>Vencedor Semifinal 1</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
+                <td id="final1jogoA">Vencedor Semifinal 1</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="finalist(final1jogoA, final1jogoB, 14, true, false)"></td>
                 <td>x</td>
-                <td><input type="number" name="" id="textArea" maxLength="2"></td>
-                <td>Vencedor Semifinal 2</td>
+                <td><input class="placar textArea" type="text" maxLength="2"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        onkeyup="finalist(final1jogoA, final1jogoB, 14, true, false)"></td>
+                <td id="final1jogoB">Vencedor Semifinal 2</td>
                 <td>Dom., 18/12 - 12:00<br>
                     Estádio Lusail</td>
             </tr>
